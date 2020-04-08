@@ -1,0 +1,208 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+        <script type="text/javascript"
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+         <link rel="stylesheet"
+         href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+         <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+ integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+             
+        <style type="text/css">
+        body{
+           background: linear-gradient(to right ,#ff5f6d , #ffc371);
+        }
+       
+        .toHide{  
+          opacity:1;
+            visibility:visible; 
+            
+        }
+        .toShow{ 
+         
+          opacity:0;
+            visibility:hidden;
+        }
+        @media (min-width:768px){
+        .load-4{ 
+          margin-top:-400px;
+          margin-left:45%;
+        }
+        }
+        @media (max-width:768px){
+        .load-4{ 
+          margin-top:-380px;
+          margin-left:45%;
+        }
+        }
+    /* Ring */
+        .ring-1 {
+    width: 50px;
+    height: 50px;
+  
+    padding: 10px;
+    border: 7px dashed #4b9cdb;
+    border-radius: 300px;
+}
+.load-4 .ring-1 {animation: loadingD 1.5s .3s 
+cubic-bezier(.17,.37,.43,.67) infinite;}
+@keyframes loadingD {
+    0 {transform: rotate(0deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+/* Ring */
+.news{  
+   margin-top:50px;
+}
+.red{ 
+  color:blue
+}
+        </style>
+
+        
+        </head>
+        <body>
+
+       
+
+          <!-- navbar -->
+   <div class = "mainBody">
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="/home"><i class="fas fa-plus"></i> Covid Help Organization(CHO)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/covidStats">Covid-19 Stats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/precautions">Precautions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/news">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/register">Register</a>
+              </li>
+            </ul>
+            </div>
+          </nav>
+          <br>
+<!-- navbar -->
+
+
+
+   <div class = "container-fluid news">
+    
+         <form action="/register" method="POST">
+          <% if(isInvalidEmail){ %>
+            <div class="form-group">
+              <label for="inputAddress" class = "red">The email you entered is invalid , please enter a valid email!!</label>
+            </div>
+          <% } %>
+          <% if(isMissing){ %>
+            <div class="form-group">
+              <label for="inputAddress" class = "red">Please enter all the details!!</label>
+            </div>
+          <% } %>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputEmail4">Name</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="Name" name="name">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputPassword4">Father's Name</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Father's Name" name="fatherName">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputPassword4">Mother's Name</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Mother's Name" name="motherName">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Email</label>
+                <input type="email" class="form-control" id="inputPassword4" placeholder="Email" name="email">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="inputPassword4">Contact No</label>
+                <input type="number" class="form-control" id="inputPassword4" placeholder="Contact No." name="contactNo">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address">
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" name="city">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputCity">State</label>
+                <input type="text" class="form-control" id="inputCity" name="state">
+              </div>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" name="zip">
+              </div>
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Symptoms</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Symptoms" name="symptoms">
+              </div>
+              
+          </form>
+          <button type="submit" id="toSubmit" class="btn btn-primary">Register</button>
+          <br>
+     
+        </div>
+      </div>
+      <div class="load-4 toShow">
+        <div class="ring-1"></div>
+    </div>
+
+       
+
+
+      <script type= "text/javascript">
+               
+        $("#toSubmit").on("click",function(){  
+          $(".toShow").removeClass("toShow");
+        $(".mainBody").addClass("toShow");
+
+    
+   
+      setTimeout(()=>{
+       
+            $("form").submit();
+   
+      },3000)        
+
+           
+        })
+      
+     
+         
+      </script>
+
+
+
+
+
+
+        </body>
+        </html>

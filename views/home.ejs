@@ -1,0 +1,842 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+        <script type="text/javascript"
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+         <link rel="stylesheet"
+         href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+         <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+ integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+             
+          <style type="text/css">
+            p{ 
+           color:yellow;
+           font-size:20px;
+            
+          }
+          h4{ 
+            color:yellow;
+            z-index:1;
+          }
+        
+
+
+          .toHide{ 
+              opacity:0;
+              visibility:hidden;
+          }
+          .toShow{ 
+            opacity:1;
+              visibility:visible;
+          }
+
+
+          body{ 
+
+         background-image:url(https://media.gettyimages.com/vectors/abstract-design-with-geometric-shapes-trendy-purple-gradient-vector-id1185640438?s=2048x2048);
+
+    }
+        
+          @media (min-width:1079px){  
+            .img-thumbnail{ 
+              width:100%;
+              height:20vw;
+          }
+          }
+          @media (min-width:876px) and  (max-width:1079px){  
+            .img-thumbnail{ 
+              width:100%;
+              height:25vw;
+          }
+          }
+          @media (min-width:767px) and (max-width:876px){  
+            .img-thumbnail{ 
+              width:100%;
+              height:29vw;
+          }
+          }
+          @media (max-width:767px){  
+            .img-thumbnail{ 
+              width:100%;
+              height:50vw;
+          }
+          }
+          
+
+            @media(max-width:768px){ 
+                 .col-xs-3{  
+                     width:25%;
+                 }
+                 h3{
+                font-size:4vw;
+            }
+            }
+        .mybtn{ 
+            width:89%;
+            background-color:green
+        }  
+        .mybtn2{ 
+             width:100%;
+        }
+        .boxborder{  
+            border:2px  gray;
+        }
+        .dropbox{ 
+            border:1px solid green;
+        }
+      .newsTitle{ 
+           height:70px;
+           
+      }
+      .hover01{
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01:hover {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.05);
+}
+.abc{ 
+     margin-top:10;
+}
+.update{  
+    margin-top:15%;
+}
+@media (min-width:580px) and (max-width:980px){ 
+    .update{  
+    margin-top:25%;
+}
+      
+}
+
+
+/* animation */
+.cssload-dots {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	outline: 1px solid red;
+	filter: url(#goo);
+		-o-filter: url(#goo);
+		-ms-filter: url(#goo);
+		-webkit-filter: url(#goo);
+		-moz-filter: url(#goo);
+}
+
+.cssload-dot {
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.cssload-dot:before {
+	content: "";
+	width: 34px;
+	height: 34px;
+	border-radius: 49px;
+	background: rgb(251,211,1);
+	position: absolute;
+	left: 50%;
+	transform: translateY(0);
+		-o-transform: translateY(0);
+		-ms-transform: translateY(0);
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+	margin-left: -17.5px;
+	margin-top: -17.5px;
+}
+
+
+
+.cssload-dot:nth-child(5):before {
+	z-index: 100;
+	width: 44.5px;
+	height: 44.5px;
+	margin-left: -21.75px;
+	margin-top: -21.75px;
+	animation: cssload-dot-colors 4.6s ease infinite;
+		-o-animation: cssload-dot-colors 4.6s ease infinite;
+		-ms-animation: cssload-dot-colors 4.6s ease infinite;
+		-webkit-animation: cssload-dot-colors 4.6s ease infinite;
+		-moz-animation: cssload-dot-colors 4.6s ease infinite;
+}
+
+
+.cssload-dot:nth-child(1) {
+	animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+		-o-animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+		-ms-animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+		-webkit-animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+		-moz-animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+}
+.cssload-dot:nth-child(1):before {
+	background-color: rgb(255,50,112);
+	animation: cssload-dot-move 4.6s 0s ease infinite;
+		-o-animation: cssload-dot-move 4.6s 0s ease infinite;
+		-ms-animation: cssload-dot-move 4.6s 0s ease infinite;
+		-webkit-animation: cssload-dot-move 4.6s 0s ease infinite;
+		-moz-animation: cssload-dot-move 4.6s 0s ease infinite;
+}
+
+.cssload-dot:nth-child(2) {
+	animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+		-o-animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+		-ms-animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+		-webkit-animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+		-moz-animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+}
+.cssload-dot:nth-child(2):before {
+	background-color: rgb(32,139,241);
+	animation: cssload-dot-move 4.6s 1.15s ease infinite;
+		-o-animation: cssload-dot-move 4.6s 1.15s ease infinite;
+		-ms-animation: cssload-dot-move 4.6s 1.15s ease infinite;
+		-webkit-animation: cssload-dot-move 4.6s 1.15s ease infinite;
+		-moz-animation: cssload-dot-move 4.6s 1.15s ease infinite;
+}
+
+.cssload-dot:nth-child(3) {
+	animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+		-o-animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+		-ms-animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+		-webkit-animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+		-moz-animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+}
+.cssload-dot:nth-child(3):before {
+	background-color: rgb(175,225,2);
+	animation: cssload-dot-move 4.6s 2.3s ease infinite;
+		-o-animation: cssload-dot-move 4.6s 2.3s ease infinite;
+		-ms-animation: cssload-dot-move 4.6s 2.3s ease infinite;
+		-webkit-animation: cssload-dot-move 4.6s 2.3s ease infinite;
+		-moz-animation: cssload-dot-move 4.6s 2.3s ease infinite;
+}
+
+.cssload-dot:nth-child(4) {
+	animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+		-o-animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+		-ms-animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+		-webkit-animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+		-moz-animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+}
+.cssload-dot:nth-child(4):before {
+	background-color: rgb(251,211,1);
+	animation: cssload-dot-move 4.6s 3.45s ease infinite;
+		-o-animation: cssload-dot-move 4.6s 3.45s ease infinite;
+		-ms-animation: cssload-dot-move 4.6s 3.45s ease infinite;
+		-webkit-animation: cssload-dot-move 4.6s 3.45s ease infinite;
+		-moz-animation: cssload-dot-move 4.6s 3.45s ease infinite;
+}
+
+@keyframes cssload-dot-move {
+	0% {
+		transform: translateY(0);
+	}
+	18%, 22% {
+		transform: translateY(-68px);
+	}
+	40%, 100% {
+		transform: translateY(0);
+	}
+}
+
+@-o-keyframes cssload-dot-move {
+	0% {
+		-o-transform: translateY(0);
+	}
+	18%, 22% {
+		-o-transform: translateY(-68px);
+	}
+	40%, 100% {
+		-o-transform: translateY(0);
+	}
+}
+
+@-ms-keyframes cssload-dot-move {
+	0% {
+		-ms-transform: translateY(0);
+	}
+	18%, 22% {
+		-ms-transform: translateY(-68px);
+	}
+	40%, 100% {
+		-ms-transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes cssload-dot-move {
+	0% {
+		-webkit-transform: translateY(0);
+	}
+	18%, 22% {
+		-webkit-transform: translateY(-68px);
+	}
+	40%, 100% {
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes cssload-dot-move {
+	0% {
+		-moz-transform: translateY(0);
+	}
+	18%, 22% {
+		-moz-transform: translateY(-68px);
+	}
+	40%, 100% {
+		-moz-transform: translateY(0);
+	}
+}
+
+@keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(251,211,1);
+	}
+	25% {
+		background-color: rgb(255,50,112);
+	}
+	50% {
+		background-color: rgb(32,139,241);
+	}
+	75% {
+		background-color: rgb(175,225,2);
+	}
+	100% {
+		background-color: rgb(251,211,1);
+	}
+}
+
+@-o-keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(251,211,1);
+	}
+	25% {
+		background-color: rgb(255,50,112);
+	}
+	50% {
+		background-color: rgb(32,139,241);
+	}
+	75% {
+		background-color: rgb(175,225,2);
+	}
+	100% {
+		background-color: rgb(251,211,1);
+	}
+}
+
+@-ms-keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(251,211,1);
+	}
+	25% {
+		background-color: rgb(255,50,112);
+	}
+	50% {
+		background-color: rgb(32,139,241);
+	}
+	75% {
+		background-color: rgb(175,225,2);
+	}
+	100% {
+		background-color: rgb(251,211,1);
+	}
+}
+
+@-webkit-keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(251,211,1);
+	}
+	25% {
+		background-color: rgb(255,50,112);
+	}
+	50% {
+		background-color: rgb(32,139,241);
+	}
+	75% {
+		background-color: rgb(175,225,2);
+	}
+	100% {
+		background-color: rgb(251,211,1);
+	}
+}
+
+@-moz-keyframes cssload-dot-colors {
+	0% {
+		background-color: rgb(251,211,1);
+	}
+	25% {
+		background-color: rgb(255,50,112);
+	}
+	50% {
+		background-color: rgb(32,139,241);
+	}
+	75% {
+		background-color: rgb(175,225,2);
+	}
+	100% {
+		background-color: rgb(251,211,1);
+	}
+}
+
+@keyframes cssload-dot-rotate-1 {
+	0% {
+		transform: rotate(-105deg);
+	}
+	100% {
+		transform: rotate(270deg);
+	}
+}
+
+@-o-keyframes cssload-dot-rotate-1 {
+	0% {
+		-o-transform: rotate(-105deg);
+	}
+	100% {
+		-o-transform: rotate(270deg);
+	}
+}
+
+@-ms-keyframes cssload-dot-rotate-1 {
+	0% {
+		-ms-transform: rotate(-105deg);
+	}
+	100% {
+		-ms-transform: rotate(270deg);
+	}
+}
+
+@-webkit-keyframes cssload-dot-rotate-1 {
+	0% {
+		-webkit-transform: rotate(-105deg);
+	}
+	100% {
+		-webkit-transform: rotate(270deg);
+	}
+}
+
+@-moz-keyframes cssload-dot-rotate-1 {
+	0% {
+		-moz-transform: rotate(-105deg);
+	}
+	100% {
+		-moz-transform: rotate(270deg);
+	}
+}
+
+@keyframes cssload-dot-rotate-2 {
+	0% {
+		transform: rotate(165deg);
+	}
+	100% {
+		transform: rotate(540deg);
+	}
+}
+
+@-o-keyframes cssload-dot-rotate-2 {
+	0% {
+		-o-transform: rotate(165deg);
+	}
+	100% {
+		-o-transform: rotate(540deg);
+	}
+}
+
+@-ms-keyframes cssload-dot-rotate-2 {
+	0% {
+		-ms-transform: rotate(165deg);
+	}
+	100% {
+		-ms-transform: rotate(540deg);
+	}
+}
+
+@-webkit-keyframes cssload-dot-rotate-2 {
+	0% {
+		-webkit-transform: rotate(165deg);
+	}
+	100% {
+		-webkit-transform: rotate(540deg);
+	}
+}
+
+@-moz-keyframes cssload-dot-rotate-2 {
+	0% {
+		-moz-transform: rotate(165deg);
+	}
+	100% {
+		-moz-transform: rotate(540deg);
+	}
+}
+
+@keyframes cssload-dot-rotate-3 {
+	0% {
+		transform: rotate(435deg);
+	}
+	100% {
+		transform: rotate(810deg);
+	}
+}
+
+@-o-keyframes cssload-dot-rotate-3 {
+	0% {
+		-o-transform: rotate(435deg);
+	}
+	100% {
+		-o-transform: rotate(810deg);
+	}
+}
+
+@-ms-keyframes cssload-dot-rotate-3 {
+	0% {
+		-ms-transform: rotate(435deg);
+	}
+	100% {
+		-ms-transform: rotate(810deg);
+	}
+}
+
+@-webkit-keyframes cssload-dot-rotate-3 {
+	0% {
+		-webkit-transform: rotate(435deg);
+	}
+	100% {
+		-webkit-transform: rotate(810deg);
+	}
+}
+
+@-moz-keyframes cssload-dot-rotate-3 {
+	0% {
+		-moz-transform: rotate(435deg);
+	}
+	100% {
+		-moz-transform: rotate(810deg);
+	}
+}
+
+@keyframes cssload-dot-rotate-4 {
+	0% {
+		transform: rotate(705deg);
+	}
+	100% {
+		transform: rotate(1080deg);
+	}
+}
+
+@-o-keyframes cssload-dot-rotate-4 {
+	0% {
+		-o-transform: rotate(705deg);
+	}
+	100% {
+		-o-transform: rotate(1080deg);
+	}
+}
+
+@-ms-keyframes cssload-dot-rotate-4 {
+	0% {
+		-ms-transform: rotate(705deg);
+	}
+	100% {
+		-ms-transform: rotate(1080deg);
+	}
+}
+
+@-webkit-keyframes cssload-dot-rotate-4 {
+	0% {
+		-webkit-transform: rotate(705deg);
+	}
+	100% {
+		-webkit-transform: rotate(1080deg);
+	}
+}
+
+@-moz-keyframes cssload-dot-rotate-4 {
+	0% {
+		-moz-transform: rotate(705deg);
+	}
+	100% {
+		-moz-transform: rotate(1080deg);
+	}
+}
+/* animation */
+
+      
+
+        
+        
+      
+       
+        
+</style>
+    </head>
+    <body>
+      <div class = "toHide">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="/home"><i class="fas fa-plus"></i> Covid Help Organization(CHO)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/covidStats">Covid-19 Stats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/precautions">Precautions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/news">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/register">Register</a>
+              </li>
+            </ul>
+            </div>
+          </nav>
+          <br>
+<!-- navbar -->
+<div class="container-fluid">
+    <div class = "row">
+        <div class = "col-lg-9 col-md-9 col-sm-8"></div>
+        <div class = "col-lg-3 col-md-3 col-sm-4">
+            <h5 class = "update">Last Updated: <%= time %></h5>
+        </div>
+    </div>
+</div>
+
+   <!-- stats -->
+   <div class = "container-fluid">
+    <div class = "row">
+        <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3"><h3 class = "abc">Country</h3></div>
+         <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3"><h3 class = "abc">Confirmed</h3></div>
+         <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3"><h3 class = "abc">Deaths</h3></div>
+         <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3"><h3 class = "abc">Recovered</h3></div>  
+    </div>
+    <hr/>
+     <% for(var i=0;i<5;i++){  %>
+        <div class = "row">
+            <div class = "col-lg-3  col-md-3 col-sm-3 col-xs-3 boxborder">
+              
+                <button data-toggle="collapse" data-target= "#demo<%=i%>" class="btn btn-primary mybtn" ><%=fullData[i].country %></button>
+            </div>
+             <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3 boxborder"><h4><%=fullData[i].cases %></h4></div>
+             <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3 boxborder"><h4><%=fullData[i].deaths %></h4> </div>
+             <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3 boxborder"><h4><%=fullData[i].recovered %></h4></div>  
+        </div>
+        <br/>
+             <div class ="row collapse" id="demo<%=i%>">
+                <div class = "col-lg-2 dropbox">
+                    <h4>Cases Today:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].todayCases %></h4>
+                </div>
+                <div class = "col-lg-2 dropbox">
+                         <h4>Deaths Today:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].todayDeaths %></h4>
+                </div>
+
+                <div class = "col-lg-2 dropbox">
+                    <h4>Critical:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].critical %></h4>
+                </div>
+
+                <div class = "col-lg-2 dropbox">
+                    <h4>Cases Per OneMillion:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].casesPerOneMillion %></h4>
+                          
+                </div>
+
+                <div class = "col-lg-2 dropbox">
+                    <h4>Deaths Per OneMillion:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].deathsPerOneMillion %></h4>
+                           
+                </div>
+               
+                
+        </div>
+        <hr>
+    <% } %> 
+    <a class="btn btn-primary mybtn2" href="/covidStats" role="button">See full Stats</a>
+    </div>
+    
+
+    <!-- stats -->
+    <br>
+    <br>
+
+    <!-- news -->  
+    <div class = "container-fluid"><h1>TOP STORIES...</h1></div>
+
+
+
+
+    <div id="demo" class="carousel slide" data-ride="carousel">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+      
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class = "container-fluid">
+                  <div class = "row">
+                      <% for(var i = 0 ; i<3;i++){ %>
+                        <% if(newsArray[i].urlToImage == null){ %>
+                            <% newsArray[i].urlToImage = "https://www.lenovo.com/medias/lenovo-think-p-medical-science-1.jpg?context=bWFzdGVyfHJvb3R8MTU2MzYwfGltYWdlL2pwZWd8aGQwL2hhZi85Nzg0NzEzNDQ1NDA2LmpwZ3w3ZmU4ZDQzNzNiMmU1MjhiNjQ4Yjc0OTc0MGFhMDE1N2M0YjRiNzdlY2Y3YzE5NDZjNzI0YzEzN2I0NzYzNzhl"; %>
+                          <% } %>
+                        <div class = "col-lg-4 col-md-4 hover01">
+                    
+                            <a href = "<%= newsArray[i].url %>"><img class = "img-thumbnail" src=" <%= newsArray[i].urlToImage%> " alt="Your text" /></a>
+                            <p><%= new Date(newsArray[i].publishedAt).getDate()+" "+ months[new Date(newsArray[i].publishedAt).getMonth()]+" "+new Date(newsArray[i].publishedAt).getFullYear() %></p>
+                            <p class = "newsTitle"><%= newsArray[i].title %></p>
+                      </div>
+                      <% } %>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class = "container-fluid">
+                <div class = "row">
+                    <% for(var i = 3 ; i<6;i++){ %>
+                        <% if(newsArray[i].urlToImage == null){ %>
+                            <% newsArray[i].urlToImage = "https://health.mo.gov/safety/medical-marijuana/img/dr-and-senior-female.jpg"; %>
+                          <% } %>
+                        <div class = "col-lg-4 col-md-4 hover01">
+                            <a href = "<%= newsArray[i].url %>"><img class = "img-thumbnail" src=" <%= newsArray[i].urlToImage%>" alt="Image Not available" /></a>
+                            <p><%= new Date(newsArray[i].publishedAt).getDate()+" "+ months[new Date(newsArray[i].publishedAt).getMonth()]+" "+new Date(newsArray[i].publishedAt).getFullYear() %></p>
+                            <p class = "newsTitle"><%= newsArray[i].title %></p>
+                         </div>
+                      <% } %>
+                    
+                </div>
+            </div>
+            
+          </div>
+          <div class="carousel-item">
+            <div class = "container-fluid">
+                <div class = "row">
+                    <% for(var i = 6 ; i<9;i++){ %>
+                        <% if(newsArray[i].urlToImage == null){ %>
+                            <% newsArray[i].urlToImage = "data:image/jpeg;base64,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"; %>
+                          <% } %>
+                        <div class = "col-lg-4 col-md-4 hover01">
+                    
+                            <a href = "<%= newsArray[i].url %>"><img class = "img-thumbnail" src="<%= newsArray[i].urlToImage%>" alt="Your text" /></a>
+                            <p><%= new Date(newsArray[i].publishedAt).getDate()+" "+ months[new Date(newsArray[i].publishedAt).getMonth()]+" "+new Date(newsArray[i].publishedAt).getFullYear() %></p>
+                            <p class = "newsTitle"><%= newsArray[i].title %></p>
+                            
+                        </div>
+                      <% } %>
+                    
+                </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      
+      </div>
+
+
+    <!-- news -->
+    <!-- videos -->
+
+    <div class = "container-fluid">
+        <h2>Coronavirus disease (COVID-19) advice for the public: Videos</h2>
+   <div class = "row">
+       <div class = "col-lg-4 col-md-4">
+        <iframe class="img-thumbnail" src="https://www.youtube.com/embed/M4olt47pr_o" frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class = "text-center">When and how to wear medical masks</p>
+       </div>
+       <div class = "col-lg-4 col-md-4">
+        <iframe class = "img-thumbnail" src="https://www.youtube.com/embed/OZcRD9fV7jo" frameborder="0"
+         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <p class = "text-center">Q&A on coronavirus</p>
+       </div>
+       <div class = "col-lg-4 col-md-4">
+        <iframe class = "img-thumbnail" src="https://www.youtube.com/embed/1APwq1df6Mw" frameborder="0" 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p class = "text-center">How to protect yourself against COVID-19?</p>
+       </div>
+       
+    
+   </div>
+</div>
+</div>
+
+
+
+<!-- videos -->
+
+
+<div class="cssload-dots">
+  <div class="cssload-dot"></div>
+  <div class="cssload-dot"></div>
+  <div class="cssload-dot"></div>
+  <div class="cssload-dot"></div>
+  <div class="cssload-dot"></div>
+</div>
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="12" ></feGaussianBlur>
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0	0 1 0 0 0	0 0 1 0 0	0 0 0 18 -7" result="goo" ></feColorMatrix>
+
+    </filter>
+  </defs>
+</svg>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+        <script type = "text/javascript">
+         setTimeout(()=>{
+                $(".toHide").removeClass("toHide");
+                $(".cssload-dots").addClass("toHide");
+         },3000)
+ 
+        
+        </script>
+        </body>
+        </html>

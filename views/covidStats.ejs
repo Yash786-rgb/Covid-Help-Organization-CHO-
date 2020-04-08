@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+        <script type="text/javascript"
+         src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+       
+
+         <link rel="stylesheet"
+         href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+         <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+ integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+             
+  
+
+
+         <style type="text/css">
+            @media(max-width:768px){ 
+                 .col-xs-3{  
+                     width:25%;
+                 }
+                 h3{
+                font-size:4vw;
+            }
+            }
+        .btn{ 
+            width:89%;
+            background-color:green
+        }  
+        .boxborder{  
+            border:2px  gray;
+        }
+        .dropbox{ 
+            border:1px solid green;
+        }
+        .text-center{  
+            margin-top:40px;
+
+        }
+       
+         body{
+        background: linear-gradient(to bottom right,#43cea2 , #185a9d);
+        
+         }
+      
+       
+        
+</style>
+         
+    </head>
+    <body>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand" href="/home"><i class="fas fa-plus"></i> Covid Help Organization(CHO)</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link " href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/covidStats">Covid-19 Stats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/precautions">Precautions</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/news">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="/register">Register</a>
+              </li>
+            </ul>
+            </div>
+          </nav>
+          <br>
+
+
+
+        <!-- navbar -->
+    <div class = "container">
+            <h1 class = "text-center">COVID-19 STATS</h1>
+    </div>
+   <br/>
+<div class="container-fluid">
+        <div class = "row">
+            <div class = "col-lg-9 col-md-9 col-sm-9"></div>
+            <div class = "col-lg-3 col-md-3 col-sm-3">
+                <h5>Last Updated: <%= time %></h5>
+            </div>
+        </div>
+</div>
+<br/>
+<div class = "container-fluid">
+    <div class = "row">
+        <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3"><h3>Country</h3></div>
+         <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3"><h3>Confirmed</h3></div>
+         <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3"><h3>Deaths</h3></div>
+         <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3"><h3>Recovered</h3></div>  
+    </div>
+    <hr/>
+    <% for(var i=0;i<fullData.length;i++){  %>
+        <div class = "row">
+            <div class = "col-lg-3  col-md-3 col-sm-3 col-xs-3 boxborder">
+              
+                <button data-toggle="collapse" data-target= "#demo<%=i%>" class="btn btn-primary" ><%=fullData[i].country %></button>
+            </div>
+             <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3 boxborder"><h4><%=fullData[i].cases %></h4></div>
+             <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3 boxborder"><h4><%=fullData[i].deaths %></h4> </div>
+             <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3 boxborder"><h4><%=fullData[i].recovered %></h4></div>  
+        </div> 
+        <br/>
+        <div class ="row collapse" id="demo<%=i%>">
+                <div class = "col-lg-2 dropbox">
+                    <h4>Cases Today:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].todayCases %></h4>
+                </div>
+
+                
+
+                <div class = "col-lg-2 dropbox">
+                         <h4>Deaths Today:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].todayDeaths %></h4>
+                </div>
+
+                <div class = "col-lg-2 dropbox">
+                    <h4>Critical:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].critical %></h4>
+                </div>
+
+                <div class = "col-lg-2 dropbox">
+                    <h4>Cases Per OneMillion:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].casesPerOneMillion %></h4>
+                          
+                </div>
+
+                <div class = "col-lg-2 dropbox">
+                    <h4>Deaths Per OneMillion:</h4>
+                </div>
+                <div class = "col-lg-10 dropbox">
+                    <h4><%=fullData[i].deathsPerOneMillion %></h4>
+                           
+                </div>
+                
+                
+        </div>
+        <hr/> 
+    <% } %>
+</div>  
+
+  
+
+        </body>
+        </html>
+    
