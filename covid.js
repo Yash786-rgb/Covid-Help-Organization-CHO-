@@ -99,11 +99,10 @@ app.post("/register",function(req,res){
 }
       
 })
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 5060;
-}
 
-// let port = 5060;
-app.listen(port);
+
+let port = 5988;
+app.listen(port , function(){ 
+console.log("server started") 
+} );
 
