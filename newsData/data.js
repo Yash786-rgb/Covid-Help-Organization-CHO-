@@ -1,5 +1,5 @@
 var unirest = require("unirest");
-var req = unirest("GET","http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=33db5acf1d7e4cbdac603bb56472e2b0" );
+var req = unirest("GET","http://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=your_API_Key" );
 var tset;
 req.headers({
 	"x-rapidapi-host": "covid-19-coronavirus-statistics.p.rapidapi.com",
